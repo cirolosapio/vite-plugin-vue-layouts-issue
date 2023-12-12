@@ -73,9 +73,14 @@ module.exports = configure(function (/* ctx */) {
       // viteVuePluginOptions: {},
 
       vitePlugins: [
-        // [ 'package-name', { ..options.. } ]
+        ['unplugin-vue-router/vite', {
+          routesFolder: 'src/pages',
+          routeBlockLang: 'yaml',
+          dts: './typed-router.d.ts',
+        }],
         ['vite-plugin-vue-layouts', {
-          // defaultLayout: 'MainLayout',
+          defaultLayout: 'MainLayout',
+          extensions: ['vue', 'ts'],
         }],
       ]
     },

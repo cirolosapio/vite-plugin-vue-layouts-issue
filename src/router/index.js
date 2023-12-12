@@ -4,8 +4,8 @@ import {
   createMemoryHistory,
   createWebHistory,
   createWebHashHistory,
-} from 'vue-router';
-import routes from './routes';
+} from 'vue-router/auto';
+import { setupLayouts } from 'virtual:generated-layouts'
 
 /*
  * If not building with SSR mode, you can
@@ -25,7 +25,7 @@ export default route(function (/* { store, ssrContext } */) {
 
   const Router = createRouter({
     scrollBehavior: () => ({ left: 0, top: 0 }),
-    routes,
+    extendRoutes: routes => setupLayouts(routes),
 
     // Leave this as is and make changes in quasar.conf.js instead!
     // quasar.conf.js -> build -> vueRouterMode

@@ -80,7 +80,6 @@ module.exports = configure(function (/* ctx */) {
         }],
         ['vite-plugin-vue-layouts', {
           defaultLayout: 'MainLayout',
-          extensions: ['vue', 'ts'],
         }],
       ]
     },

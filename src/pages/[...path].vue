@@ -12,7 +12,7 @@
         color="white"
         text-color="blue"
         unelevated
-        to="/clients"
+        to="/"
         label="Go Home"
         no-caps
       />
